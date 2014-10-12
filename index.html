@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html style="background-color:InfoBackground">
+<head>
+    <script type="text/javascript">
+        var image1 = new Image()
+        image1.src = "My_2048/2 slider.jpg"
+        var image2 = new Image()
+        image2.src = "My_2048/4 slider.jpg"
+        var image3 = new Image()
+        image3.src = "My_2048/8 slider.jpg"
+        var image4 = new Image()
+        image4.src = "My_2048/16 slider.jpg"
+        var image5 = new Image()
+        image5.src = "My_2048/32 slider.jpg"
+        var image6 = new Image()
+        image6.src = "My_2048/64 slider.jpg"
+        var image7 = new Image()
+        image7.src = "My_2048/128 slider.jpg"
+        var image8 = new Image()
+        image8.src = "My_2048/256 slider.jpg"
+        var image9 = new Image()
+        image9.src = "My_2048/512 slider.jpg"
+        var image10 = new Image()
+        image10.src = "My_2048/1024 slider.jpg"
+        var image11 = new Image()
+        image11.src = "My_2048/2048 slider.jpg"
+        var image12 = new Image()
+        image12.src = "My_2048/4098 slider.jpg"
+        
+    </script>
+    <style>
+        .left-div {
+            float: left; 
+            display:inline-block;
+        }
+        
+        .right-div {            
+            
+            display:inline-block;
+        }
+        .header {
+            padding:0 0 0 28em;
+            position:absolute;            
+            text-align:center;
+            text-emphasis-color:antiquewhite;
+        }
+        .footer {
+            padding:0 0 5em 20em;
+            position:absolute;
+            margin-top:50em;
+            text-align:center;            
+        }
+        #dvAboutMe.dvFooter{            
+            color:dodgerblue;
+            font-weight:bold;
+        }
+        #dvContributions.dvFooter{
+            color:dodgerblue;
+            font-weight:bold;
+        }
+        #dvSocial.dvFooter{
+            color:dodgerblue;
+            font-weight:bold;
+        }
+        b.dvBold{
+            color:darkviolet;
+        }
+        a.dvAnchor{
+            color:darkviolet;
+        }
+        .hr {
+            background-color:darkturquoise;
+            border-color:darkturquoise;
+            color:darkturquoise;
+        }
+    </style>
+  <meta charset="utf-8">
+  <title>2048</title>
+
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x920.png"  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+    <div class="header">
+        <span>This is my 2048 game. Created by <a href="http://www.facebook.com/aditya.srk.3" target="_blank">Aditya SRK</a></span>
+    </div>
+
+    <div style="padding-left:10em">
+
+        <div id="left-div" style="float:left; padding:22em 2em 0em 0em; vertical-align:central">
+       <p><img src="images/pentagg.jpg" width="250" height="250" name="slide" style="border:solid" /></p>
+        <script type="text/javascript">
+            var step = 1;
+            function slideit() {
+                document.images.slide.src = eval("image" + step + ".src");
+                if (step < 12)
+                    step++;
+                else
+                    step = 1;
+                setTimeout("slideit()", 2500);
+            }
+            slideit();
+        </script>
+       </div>
+
+        <div class="container" style="float:left">
+    <div class="heading">
+        <h1 style="padding-left:2em">im_adityaSRK 2048</h1>
+      <h1 class="title">2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+
+    <div class="above-game">
+      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+      <a class="restart-button">New Game</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button">Try again</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>   
+
+   
+  </div>        
+                
+    </div>
+
+    
+    <div class="footer" style="width:50%">
+        <hr style="background-color:firebrick;color:firebrick;border-color:firebrick;" />
+        
+        <div id="dvAboutMe" style="display:inline-block; float:left; padding:0 5em 0 1.5em" class="dvFooter">
+            <span>About me</span><br />
+            <hr style="background-color:firebrick;color:firebrick;border-color:firebrick;" />
+                <div><b class="dvBold">Programmer</b></div><br />
+                <div><b class="dvBold">Ameteur poet</b></div><br />
+                <div><b class="dvBold">Of course a geek</b></div>
+            
+        </div>
+
+        <div id="dvContributions" style="display:inline-block; float:left; padding-right:5em" class="dvFooter">
+            <span>Contributions</span><br />
+            <hr style="background-color:firebrick;color:firebrick;border-color:firebrick;" />
+            <div><a href="https://github.com/gabrielecirulli/2048" target="_blank" class="dvAnchor">Github</a></div><br />
+            <div><a href="https://www.udacity.com/course/ud248" target="_blank" class="dvAnchor">Udacity</a></div><br />
+            <div><a href="http://gabrielecirulli.github.io/2048/" target="_blank" class="dvAnchor">2048</a></div>
+        </div>
+
+        <div id="dvSocial" style="display:inline-block; float:left" class="dvFooter">
+            <span>Social Media</span><br />
+            <hr style="background-color:firebrick;color:firebrick;border-color:firebrick;" />
+            <div><a href="http://www.Facebook.com/YouWorldAndMe" target="_blank" class="dvAnchor">Let us Know the World</a></div><br />
+            <div><a href="http://www.twitter.com/im_adityaSRK" target="_blank" class="dvAnchor">Twitter</a></div><br />
+            <div><a href="http://adityasrk369.wordpress.com/" target="_blank" class="dvAnchor">WordPress</a></div>
+        </div>
+
+    </div>
+
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+</body>  
+
+</html>
